@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<link rel="stylesheet" href="css/style.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Homework 4. Расшифровка VIN кода</title>
+</head>
+
+<body>
+	<header>
+		<h1>
+			Расшифровка VIN кода
+		</h1>
+	</header>
+	<main>
+		<div class="intro">
+			<p>С 1981 года <span class="bold">VIN</span> состоит из 17 символов, букв латинского алфавита и цифр, которые
+				не включают в себя буквы
+				<span class="bold">I (i), О (о)</span>,
+				или <span class="bold">Q (q)</span> (чтобы избежать путаницы с цифрами)
+			</p>
+			<p>
+				<span class="bold">VIN код(Vehicle identification number)</span> — это уникальный код транспортного
+				средства. Он состоит из трех
+				частей: <span class="bold">WMI, VDI и VIS</span> .
+			</p>
+			<p class="image">
+				<img src="img/vin.jpg" alt="Структура VIN">
+			</p>
+			<p>
+				<span class="bold">WMI (World Manufacturers Identification)</span> – трехсимвольный код, присваемый
+				изготовителю с целью его
+				идентификации. Первые
+				два символа могут быть как цифрами, так и буквами, и обозначают географическую зону и страну в этой зоне
+				(например, S-Z
+				относятся к Европе, а SN-ST обозначают Германию). Третий символ обозначает фирму — производителя. При этом,
+				производитель, выпускающий меньше 500 автомобилей в год, использует в третьей позиции цифру 9, а 12, 13 и
+				14-е позиции
+				VIN — для остальной части своей идентификации. Некоторые производители используют третий символ как код для
+				категории
+				транспортного средства (например, легковой автомобиль или грузовик), а также для идентификации определенного
+				подразделения производителя.
+			</p>
+			<p>
+				<span class="bold">VDS (Vehicle Description Section)</span> – 6 символов, которыми описывается сам
+				автомобиль. Как будет зашифрована
+				информация,
+				определяет сам производитель. Последняя цифра обычно является контрольной. Она служит для дополнительной
+				защиты от
+				«перебивки VIN кода». Российские, японские, а также многие европейские и корейские производители не
+				используют
+				контрольную цифру.
+			</p>
+			<p>
+				<span class="bold">VIS (Vehicle Identification Section)</span> – восьмизначный код несет в себе
+				дополнительную информацию об
+				автомобиле (например,
+				год выпуска, завод изготовитель). Последние 4 знака – всегда цифры.
+			</p>
+		</div>
+		<h2>
+			Расшифровка VIN (ВИН-кода)
+		</h2>
+		<div class="decoding">
+			<p class="image">
+				<img src="img/vin2.jpg" alt="Расшифровка VIN">
+			</p>
+			<div class="one">
+				<p>
+					<span class="green">1-й символ</span> (<span class="green">1</span> FALP62W4WH128703) —
+					cтрана-производитель.
+				</p>
+				<ul>
+					<li><span class="green">1-5 – Северная Америка</span>: США (1,4,5), Канады (2), Мексика (3)</li>
+					<li><span class="green">J-R – Азия</span>: Япония (J), Корея (K), Китай (L), Индия (М)</li>
+					<li><span class="green">S-Z – Европа</span>: Англия (S), Германия (S, W), Италия (Z), Швеция (Y),
+						Норвегия (Y), Франция (V), Испания
+						(V), Венгрия (T),
+						Чешская Республика (T), Украина (Y), Россия (X), СССР (X)</li>
+					<li><span class="green">6-7 – Океания</span>: Австралия (6)</li>
+				</ul>
+				<h3>
+					Полный список кодов стран мира в VIN
+				</h3>
+				<p class="image">
+					<img src="img/vin3.jpg" alt="Список стран">
+				</p>
+			</div>
+			<p>
+				<span class="yellow">2-й символ</span> (1 <span class="yellow">F</span> ALP62W4WH128703) —
+				компания-производитель.
+			</p>
+			<p>
+				Audi(A), Acura (H), BMW(B), BMW (США) (U), Buick(4), Cadillac(6), Chevrolet(1), Chrysler©, Dodge(B или D),
+				Ford(F),
+				Ferrari (F), Fiat(F), General Motors (G), GM Canada(7), General Motors(G), Honda(H), Hyundai (M), Infiniti
+				(N),
+				Isuzu(S), Jaguar (A), Jeep(J), Lincoln(h), Land Rover (A), Lexus(T), Mercedes Benz(D), Mercedes Benz (США)
+				(J),
+				Mercury(M), Mitsubishi(M), Mitsubishi (США) (A), Nissan(N), Oldsmobile(3), Opel(O), Pontiac(2 или 5),
+				Plymouth(P),
+				Saturn(8), Skoda(M), Subaru (F), Suzuki(S), Toyota(T), VW(W), Volvo(V).
+			</p>
+			<p>
+				<span class="blue">3-й символ</span> (1F <span class="blue">A</span> LP62W4WH128703) — изготовитель
+				автомобиля. Если производитель изготавливает меньше 500
+				автомобилей, то
+				3-й символ отмечается цифрой «9».
+			</p>
+			<p>
+				<span class="red">4-й — 8-й символы</span> (1FA <span class="red">LP62W</span> 4WH128703) — информация о
+				модели автомобиля, типе кузова, комплектации,
+				двигателе и т.д.
+			</p>
+			<p>
+				<span class="violet">9-й символ</span> (1FALP62W <span class="violet">4</span> WH128703) — всегда
+				контрольная цифра для производителей из США и Китая. Для остальных
+				– либо
+				контрольная цифра, либо дополнительная информация об автомобиле.
+			</p>
+			<p>
+				<span class="gray">10-й символ</span> (1FALP62W4 <span class="gray">W</span> H128703) — обычно модельный год
+				автомобиля. Важно помнить, что модельный год может
+				опережать
+				календарный и отсчитываться не с 1 января, а, к примеру, с августа (Audi) или с июля (ВАЗ) предыдущего
+				календарного
+				года. Многие европейские и японские производители, такие как Peugeot, Mercedes-Benz и Toyota, не указывает в
+				VIN
+				модельный год.
+			</p>
+			<h3>
+				Расшифровка модельного года автомобиля в VIN
+			</h3>
+			<div class="image">
+				<img src="img/vin4.jpg" alt="Года выпуска">
+			</div>
+			<p>
+				<span class="orange">11-й символ</span> (1FALP62W4W <span class="orange">H</span> 128703) — информация о
+				заводе изготовителе.
+			</p>
+			<p>
+				<span class="pink">12-й — 17-й символы</span> (1FALP62W4WH <span class="pink">128703</span>) — обозначают
+				последовательность транспортного средства для
+				производства, по
+				ходу прохода по сборочному конвейеру.
+			</p>
+		</div>
+	</main>
+	<footer>
+		Всем удачи на дорогах ;-)
+	</footer>
+
+</body>
+
+</html>

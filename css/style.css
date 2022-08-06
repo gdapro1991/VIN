@@ -1,0 +1,118 @@
+/* &display=swap&subset=cyrilic-ext */
+@import url(https://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps:700&display=swap&subset=cyrilic-ext);
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria.woff2') format('woff2'),
+		url('../fonts/Geometria.woff') format('woff');
+	font-weight: normal;
+	font-style: normal;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Geometria';
+	src: url('../fonts/Geometria-Bold.woff2') format('woff2'),
+		url('../fonts/Geometria-Bold.woff') format('woff');
+	font-weight: bold;
+	font-style: normal;
+	font-display: swap;
+}
+
+/* ОБНУЛЕНИЕ СТИЛЕЙ */
+*,
+*::before,
+*::after {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+li {
+	list-style: none;
+}
+a,
+a:visited {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: none;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: inherit;
+	font-size: inherit;
+}
+img {
+	vertical-align: top;
+}
+html {
+	font-size: 22px; /* по умолчанию */
+}
+body {
+	line-height: 1;
+}
+/* --------------- */
+
+body {
+	line-height: 150%;
+	text-align: justify;
+	font-family: 'Geometria';
+}
+.image {
+	text-align: center;
+}
+.bold {
+	font-weight: 700;
+}
+.green {
+	font-weight: 700;
+	color: #008000;
+}
+.yellow {
+	font-weight: 700;
+	color: #ffff00;
+}
+.blue {
+	font-weight: 700;
+	color: #0000ff;
+}
+.red {
+	font-weight: 700;
+	color: #ff0000;
+}
+.violet {
+	font-weight: 700;
+	color: #ee82ee;
+}
+.gray {
+	font-weight: 700;
+	color: #808080;
+}
+.orange {
+	font-weight: 700;
+	color: #ffa500;
+}
+.pink {
+	font-weight: 700;
+	color: #ffc0cb;
+}
+h1,
+h2,
+h3 {
+	font-family: 'Oleo Script Swash Caps', cursive;
+	font-weight: 700;
+	text-align: center;
+	text-shadow: 1px 1px 2px #808080;
+}
+h1 {
+	font-size: 48px;
+}
+h2,
+h3 {
+	font-size: 26px;
+	text-decoration: underline;
+}
